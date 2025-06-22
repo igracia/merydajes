@@ -1,5 +1,5 @@
 {
-  "title": "Wine‑Club – Acceso Anticipado (ES)",
+  "title": "Wine-Club – Acceso Anticipado (ES)",
   "type": "form",
   "settings": {
     "language": "es",
@@ -12,9 +12,9 @@
   "welcome_screens": [
     {
       "ref": "welcome1",
-      "title": "🍷 Únete a nuestra comunidad de amantes del vino",
+      "title": "🍷 Únete a nuestra comunidad de amantes del vino",
       "properties": {
-        "description": "Apúntate para recibir invitaciones a nuestras noches de cata y sé el primero en enterarte cuando lancemos nuestras cajas mensuales.",
+        "description": "Apúntate para recibir invitaciones a nuestras noches de cata y sé el primero en enterarte cuando lancemos nuestras cajas mensuales.\n\nTus datos se tratarán conforme a nuestra Política de Privacidad: https://wineclub.es/privacidad",
         "show_button": true,
         "button_text": "Empezar"
       }
@@ -27,7 +27,8 @@
       "type": "thankyou_screen",
       "properties": {
         "show_button": false,
-        "share_icons": false
+        "share_icons": false,
+        "description": "Muy pronto recibirás nuestras invitaciones. ¡Salud!"
       }
     }
   ],
@@ -123,7 +124,17 @@
       "validations": { "required": true }
     },
     {
-      "ref": "q_consentimiento",
+      "ref": "q_privacidad",
+      "title": "He leído y acepto la [Política de Privacidad](https://wineclub.es/privacidad).",
+      "type": "legal",
+      "properties": {
+        "description": "Tus datos se usarán únicamente para enviarte invitaciones y novedades de Wine-Club. **No los cederemos a terceros.**",
+        "alignment": "left"
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_comunicaciones",
       "title": "Acepto recibir comunicaciones sobre catas y lanzamientos. Puedo darme de baja en cualquier momento.",
       "type": "legal",
       "validations": { "required": true }
