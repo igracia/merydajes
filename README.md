@@ -1,2 +1,3 @@
-# datasciencecoursera
-Repo for Data Science specialization 
+# Merydajes
+
+Repo de cositas de Merydajes
