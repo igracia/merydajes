@@ -17,7 +17,7 @@
       "ref": "welcome1",
       "title": "🍷 Únete a nuestra comunidad de amantes del vino",
       "properties": {
-        "description": "Apúntate a nuestras catas y sé el primero en enterarte cuando lancemos las cajas mensuales.\n\n⏱️ Solo te llevará 3 minutos",
+        "description": "Apúntate a nuestras catas y sé el primero en enterarte cuando lancemos las cajas mensuales.\n\n⏱️ Solo te llevará 2 minutos",
         "show_button": true,
         "button_text": "Empezar"
       }
@@ -82,8 +82,45 @@
     },
 
     {
+      "ref": "q_wine_journey",
+      "title": "¿Cómo describirías tu relación con el vino?",
+      "type": "multiple_choice",
+      "properties": {
+        "allow_multiple_selection": false,
+        "choices": [
+          { "label": "🌱 Estoy empezando a explorar", "ref": "c_beginner" },
+          { "label": "🚶 Bebo regularmente pero quiero aprender más", "ref": "c_learning" },
+          { "label": "🏃 Tengo experiencia y busco nuevos desafíos", "ref": "c_experienced" },
+          { "label": "🎯 Sé exactamente lo que me gusta", "ref": "c_expert" }
+        ]
+      },
+      "validations": { "required": true }
+    },
+
+    {
+      "ref": "q_occasions",
+      "title": "¿En qué momentos sueles beber vino? (máximo 2)",
+      "type": "multiple_choice",
+      "properties": { 
+        "allow_multiple_selection": true,
+        "description": "Selecciona hasta 2 opciones",
+        "choices": [
+          { "label": "🍽️ Cenas en casa" },
+          { "label": "🎉 Celebraciones especiales" },
+          { "label": "👥 Reuniones con amigos" },
+          { "label": "🧘 Momento de relax personal" },
+          { "label": "🎁 Para regalar" }
+        ]
+      },
+      "validations": { 
+        "required": true,
+        "max_selection": 2
+      }
+    },
+
+    {
       "ref": "q_color",
-      "title": "Cuando compras vino para casa, ¿qué color sueles elegir primero?",
+      "title": "¿Qué tipo de vino prefieres normalmente?",
       "type": "multiple_choice",
       "properties": {
         "allow_multiple_selection": false,
@@ -91,130 +128,43 @@
           { "label": "🍷 Tinto", "ref": "c_tinto" },
           { "label": "🥂 Blanco", "ref": "c_blanco" },
           { "label": "🍾 Espumoso", "ref": "c_espumoso" },
-          { "label": "🌹 Rosado", "ref": "c_rosado" }
+          { "label": "🌹 Rosado", "ref": "c_rosado" },
+          { "label": "🤷 Me gusta probar de todo", "ref": "c_todos" }
         ]
       },
       "validations": { "required": true }
     },
+
     {
-      "ref": "q_tinto_perfil",
-      "title": "Si hoy abres un tinto, ¿cuál de estos estilos te apetece más?",
+      "ref": "q_wine_values",
+      "title": "¿Qué es lo más importante para ti en un vino?",
       "type": "multiple_choice",
       "properties": {
         "allow_multiple_selection": false,
         "choices": [
-          { "label": "🌿 Fresco y ligero" },
-          { "label": "🍓 Frutal y jugoso" },
-          { "label": "⚖️ Redondo y equilibrado" },
-          { "label": "💪 Potente y estructurado" }
+          { "label": "🏆 Calidad excepcional" },
+          { "label": "💰 Buena relación calidad-precio" },
+          { "label": "🌱 Producción sostenible/ecológica" },
+          { "label": "📍 Origen local/proximidad" },
+          { "label": "📚 Historia y tradición" },
+          { "label": "🔬 Innovación y técnicas modernas" }
         ]
       },
       "validations": { "required": true }
     },
 
     {
-      "ref": "q_blanco_perfil",
-      "title": "En los blancos, ¿qué carácter prefieres?",
+      "ref": "q_decision_factors",
+      "title": "Cuando eliges un vino nuevo, ¿qué te influye más?",
       "type": "multiple_choice",
       "properties": {
         "allow_multiple_selection": false,
         "choices": [
-          { "label": "⚡ Vibrante y cítrico" },
-          { "label": "🌸 Aromático y floral" },
-          { "label": "🗿 Mineral y seco" },
-          { "label": "🥥 Cremoso y con barrica" }
-        ]
-      },
-      "validations": { "required": true }
-    },
-
-    {
-      "ref": "q_espumoso_perfil",
-      "title": "¿Cómo te gusta el espumoso?",
-      "type": "multiple_choice",
-      "properties": {
-        "allow_multiple_selection": false,
-        "choices": [
-          { "label": "🏔️ Brut Nature (muy seco)" },
-          { "label": "⚖️ Brut (seco equilibrado)" },
-          { "label": "🍯 Semi‑seco (toque dulce)" },
-          { "label": "🍰 Dulce (postre / brindis)" }
-        ]
-      },
-      "validations": { "required": true }
-    },
-
-    {
-      "ref": "q_rosado_perfil",
-      "title": "Para un rosado ideal, buscas que sea…",
-      "type": "multiple_choice",
-      "properties": {
-        "allow_multiple_selection": false,
-        "choices": [
-          { "label": "🌸 Delicado y pálido" },
-          { "label": "🍓 Frutal y goloso" },
-          { "label": "💪 Con cuerpo y serio" }
-        ]
-      },
-      "validations": { "required": true }
-    },
-
-    {
-      "ref": "q_uvas",
-      "title": "¿Qué variedades de uva te interesan más?",
-      "type": "multiple_choice",
-      "properties": {
-        "allow_multiple_selection": true,
-        "allow_other_choice": true,
-        "description": "Puedes elegir varias opciones",
-        "choices": [
-          { "label": "Tempranillo" },
-          { "label": "Garnacha" },
-          { "label": "Monastrell" },
-          { "label": "Bobal" },
-          { "label": "Mencía" },
-          { "label": "Cariñena" },
-          { "label": "Albariño" },
-          { "label": "Verdejo" },
-          { "label": "Godello" },
-          { "label": "Palomino Fino" },
-          { "label": "Macabeo (Viura)" },
-          { "label": "Xarel·lo" }
-        ]
-      },
-      "validations": { "required": true }
-    },
-
-    {
-      "ref": "q_aromas",
-      "title": "Selecciona hasta 2 aromas que te alegran al oler una copa",
-      "type": "multiple_choice",
-      "properties": {
-        "allow_multiple_selection": true,
-        "randomize": true,
-        "choices": [
-          { "label": "🍋 Cítricos" },
-          { "label": "🍓 Frutos rojos" },
-          { "label": "🌿 Hierbas frescas" },
-          { "label": "🌸 Flores" },
-          { "label": "🌶️ Especias dulces" },
-          { "label": "☕ Tostados (café, cacao)" }
-        ]
-      },
-      "validations": { "max_selection": 2, "required": true }
-    },
-
-    {
-      "ref": "q_disgusto",
-      "title": "¿Qué rasgo echaría a perder un vino para ti?",
-      "type": "multiple_choice",
-      "properties": {
-        "allow_multiple_selection": false,
-        "choices": [
-          { "label": "😬 Demasiado ácido" },
-          { "label": "🔥 Sensación alcohólica" },
-          { "label": "😤 Astringente o áspero" },
-          { "label": "😴 Plano, sin sabor" }
+          { "label": "🎯 Recomendación de experto" },
+          { "label": "⭐ Puntuación en guías" },
+          { "label": "💰 Precio" },
+          { "label": "📍 Región de origen" },
+          { "label": "🏆 Experiencias previas con la bodega" }
         ]
       },
       "validations": { "required": true }
@@ -222,7 +172,7 @@
 
     {
       "ref": "q_aventura",
-      "title": "¿Cómo de aventurero/a eres con nuevas variedades?",
+      "title": "¿Cómo de aventurero/a eres con vinos nuevos?",
       "type": "opinion_scale",
       "properties": {
         "steps": 5,
@@ -261,21 +211,6 @@
           { "label": "Varias veces por semana" },
           { "label": "Solo fines de semana" },
           { "label": "Ocasionalmente" }
-        ]
-      },
-      "validations": { "required": true }
-    },
-
-    {
-      "ref": "q_conocimiento",
-      "title": "Al leer la contraetiqueta de una botella, tu sensación es…",
-      "type": "multiple_choice",
-      "properties": {
-        "allow_multiple_selection": false,
-        "choices": [
-          { "label": "🤔 Necesito que me la expliquen" },
-          { "label": "👍 Entiendo lo esencial" },
-          { "label": "🎓 Soy la referencia del grupo" }
         ]
       },
       "validations": { "required": true }
@@ -379,78 +314,6 @@
           "condition": { "op": "always", "vars": [] },
           "details": { "to": { "type": "field", "value": "q_edad" } }
         }
-      ]
-    },
-
-    {
-      "type": "field",
-      "ref": "q_color",
-      "actions": [
-        {
-          "action": "jump",
-          "condition": { "op": "is", "vars": [
-            { "type": "field", "value": "q_color" },
-            { "type": "choice", "value": "c_tinto" }
-          ]},
-          "details": { "to": { "type": "field", "value": "q_tinto_perfil" } }
-        },
-        {
-          "action": "jump",
-          "condition": { "op": "is", "vars": [
-            { "type": "field", "value": "q_color" },
-            { "type": "choice", "value": "c_blanco" }
-          ]},
-          "details": { "to": { "type": "field", "value": "q_blanco_perfil" } }
-        },
-        {
-          "action": "jump",
-          "condition": { "op": "is", "vars": [
-            { "type": "field", "value": "q_color" },
-            { "type": "choice", "value": "c_espumoso" }
-          ]},
-          "details": { "to": { "type": "field", "value": "q_espumoso_perfil" } }
-        },
-        {
-          "action": "jump",
-          "condition": { "op": "is", "vars": [
-            { "type": "field", "value": "q_color" },
-            { "type": "choice", "value": "c_rosado" }
-          ]},
-          "details": { "to": { "type": "field", "value": "q_rosado_perfil" } }
-        }
-      ]
-    },
-
-    {
-      "type": "field",
-      "ref": "q_tinto_perfil",
-      "actions": [
-        { "action": "jump", "condition": { "op": "always", "vars": [] },
-          "details": { "to": { "type": "field", "value": "q_uvas" } } }
-      ]
-    },
-    {
-      "type": "field",
-      "ref": "q_blanco_perfil",
-      "actions": [
-        { "action": "jump", "condition": { "op": "always", "vars": [] },
-          "details": { "to": { "type": "field", "value": "q_uvas" } } }
-      ]
-    },
-    {
-      "type": "field",
-      "ref": "q_espumoso_perfil",
-      "actions": [
-        { "action": "jump", "condition": { "op": "always", "vars": [] },
-          "details": { "to": { "type": "field", "value": "q_uvas" } } }
-      ]
-    },
-    {
-      "type": "field",
-      "ref": "q_rosado_perfil",
-      "actions": [
-        { "action": "jump", "condition": { "op": "always", "vars": [] },
-          "details": { "to": { "type": "field", "value": "q_uvas" } } }
       ]
     }
   ],

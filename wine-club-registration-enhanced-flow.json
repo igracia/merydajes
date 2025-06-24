@@ -1,0 +1,286 @@
+{
+  "title": "Club de Vino Merydajes – Acceso Anticipado (ES)",
+  "settings": {
+    "is_public": true,
+    "language": "es",
+    "progress_bar": "percentage",
+    "show_progress_bar": true,
+    "show_typeform_branding": true,
+    "meta": { "allow_indexing": false }
+  },
+
+  "hidden": ["pais", "anio_nacimiento", "codigo_postal"],
+
+  "welcome_screens": [
+    {
+      "ref": "welcome1",
+      "title": "🍷 ¡Bienvenido a Merydajes Wine Club!",
+      "properties": {
+        "description": "Sé el primero en enterarte de todo lo que Merydajes Wine Club ofrece…",
+        "show_button": true,
+        "button_text": "Empezar"
+      }
+    }
+  ],
+
+  "fields": [
+    {
+      "ref": "q_nombre",
+      "title": "¿Cómo te llamas?",
+      "type": "short_text",
+      "properties": {
+        "description": "Solo el de pila, las formalidades vienen después."
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_contacto",
+      "title": "¿Cómo prefieres que te contactemos?",
+      "type": "multiple_choice",
+      "properties": {
+        "description": "Somos de teoría la justa, pero de mucha práctica.",
+        "allow_multiple_selection": false,
+        "choices": [
+          { "label": "📧 Correo electrónico", "ref": "c_email" },
+          { "label": "📱 WhatsApp",           "ref": "c_whatsapp" },
+          { "label": "📧📱 Ambos",            "ref": "c_ambos" }
+        ]
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_email",
+      "title": "Tu correo electrónico",
+      "type": "email",
+      "properties": {
+        "description": "Nos hace falta para contarte lo justo y necesario sin molestar."
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_whatsapp",
+      "title": "Tu número de WhatsApp",
+      "type": "phone_number",
+      "properties": {
+        "default_country_code": "es",
+        "description": "¡No te preocupes! Sólo susurros vinícolas."
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_edad",
+      "title": "Confirmo que tengo la edad legal para consumir alcohol en mi país",
+      "type": "legal",
+      "properties": { "description": "No nos mientas, lo notaremos enseguida." },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_color_ratio",
+      "title": "Proporción tinto / blanco que sueles beber",
+      "type": "opinion_scale",
+      "properties": {
+        "steps": 11,
+        "labels": { "left": "Solo blancos", "right": "Solo tintos" }
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_estilo",
+      "title": "Elige tu estilo de vino",
+      "type": "opinion_scale",
+      "properties": {
+        "steps": 5,
+        "labels": { "left": "Seco & ligero", "right": "Dulce & potente" }
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_precio",
+      "title": "Tu presupuesto por botella suele ser…",
+      "type": "multiple_choice",
+      "properties": {
+        "allow_multiple_selection": false,
+        "choices": [
+          { "label": "💰 Hasta 10 €" },
+          { "label": "💰💰 11 – 20 €" },
+          { "label": "💰💰💰 21 – 40 €" },
+          { "label": "💰💰💰💰 Más de 40 €" }
+        ]
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_frecuencia",
+      "title": "¿Cada cuánto descorchas vino en casa?",
+      "type": "multiple_choice",
+      "properties": {
+        "allow_multiple_selection": false,
+        "choices": [
+          { "label": "A diario" },
+          { "label": "Varias veces por semana" },
+          { "label": "Solo fines de semana" },
+          { "label": "Ocasionalmente" }
+        ]
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_detalle",
+      "title": "¿Quieres afinar aún más tus recomendaciones? (+30 s)",
+      "type": "yes_no",
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_occasions",
+      "title": "¿En qué ocasiones disfrutas el vino? (máx. 2)",
+      "type": "multiple_choice",
+      "properties": {
+        "allow_multiple_selection": true,
+        "choices": [
+          { "label": "🍽️ Cenas en casa" },
+          { "label": "🎉 Celebraciones especiales" },
+          { "label": "👥 Reuniones con amigos" },
+          { "label": "🧘 Momento de relax" }
+        ]
+      },
+      "validations": { "required": true }
+    },
+
+    {
+      "ref": "q_aventura",
+      "title": "¿Cómo de aventurero/a eres con vinos nuevos?",
+      "type": "opinion_scale",
+      "properties": {
+        "steps": 5,
+        "labels": { "left": "Prefiero lo conocido", "right": "¡Sorpréndeme!" }
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_aviso",
+      "title": "¿Quieres que te avisemos cuando lancemos la suscripción de cajas?",
+      "type": "yes_no",
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_privacidad",
+      "title": "He leído y acepto la información básica sobre protección de datos",
+      "type": "legal",
+      "properties": {
+        "description": "**Responsable:** Merydajes S. L.… (texto legal completo)"
+      },
+      "validations": { "required": true }
+    },
+    {
+      "ref": "q_comunicacion",
+      "title": "Acepto recibir comunicaciones sobre catas y lanzamientos",
+      "type": "legal",
+      "properties": { "description": "Puedes darte de baja en cualquier momento" },
+      "validations": { "required": true }
+    }
+  ],
+
+  "logic": [
+    {
+      "type": "field",
+      "ref": "q_contacto",
+      "actions": [
+        {
+          "action": "jump",
+          "condition": {
+            "op": "is",
+            "vars": [
+              { "type": "field",  "value": "q_contacto" },
+              { "type": "choice", "value": "c_email" }
+            ]
+          },
+          "details": { "to": { "type": "field", "value": "q_email" } }
+        },
+        {
+          "action": "jump",
+          "condition": {
+            "op": "is",
+            "vars": [
+              { "type": "field",  "value": "q_contacto" },
+              { "type": "choice", "value": "c_whatsapp" }
+            ]
+          },
+          "details": { "to": { "type": "field", "value": "q_whatsapp" } }
+        },
+        {
+          "action": "jump",
+          "condition": {
+            "op": "is",
+            "vars": [
+              { "type": "field",  "value": "q_contacto" },
+              { "type": "choice", "value": "c_ambos" }
+            ]
+          },
+          "details": { "to": { "type": "field", "value": "q_email" } }
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "ref": "q_email",
+      "actions": [
+        {
+          "action": "jump",
+          "condition": {
+            "op": "is",
+            "vars": [
+              { "type": "field",  "value": "q_contacto" },
+              { "type": "choice", "value": "c_ambos" }
+            ]
+          },
+          "details": { "to": { "type": "field", "value": "q_whatsapp" } }
+        },
+        {
+          "action": "jump",
+          "condition": { "op": "always", "vars": [] },
+          "details": { "to": { "type": "field", "value": "q_edad" } }
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "ref": "q_whatsapp",
+      "actions": [
+        {
+          "action": "jump",
+          "condition": { "op": "always", "vars": [] },
+          "details": { "to": { "type": "field", "value": "q_edad" } }
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "ref": "q_detalle",
+      "actions": [
+        {
+          "action": "jump",
+          "condition": {
+            "op": "is",
+            "vars": [
+              { "type": "field", "value": "q_detalle" },
+              { "type": "constant", "value": false }
+            ]
+          },
+          "details": { "to": { "type": "field", "value": "q_aviso" } }
+        }
+      ]
+    }
+  ],
+
+  "thankyou_screens": [
+    {
+      "ref": "ty1",
+      "title": "¡Ya formas parte! 🎉",
+      "properties": {
+        "description": "Muy pronto recibirás nuestras invitaciones a catas exclusivas.\n\n¡Salud! 🍷",
+        "show_button": false,
+        "share_icons": false
+      }
+    }
+  ]
+}
