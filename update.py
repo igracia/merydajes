@@ -68,9 +68,11 @@ def handle_response(resp: requests.Response, expect_status: int):
         try:
             detail = resp.json()
         except ValueError:
-            detail = resp.text
+            detail = resp.json()
+        
+        print(json.dumps(detail))
         sys.exit(
-            f"[ERROR] API devolvió {resp.status_code} (esperado {expect_status}).\n\nDetalles: {detail}"
+            f"[ERROR] API devolvió {resp.status_code} (esperado {expect_status})."
         )
 
 
